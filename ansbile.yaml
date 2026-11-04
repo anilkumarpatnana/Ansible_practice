@@ -1,0 +1,4 @@
+- name= Installing Nginx
+  hosts= frontend
+  tasks=
+  - name
