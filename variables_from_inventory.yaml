@@ -4,4 +4,4 @@
   tasks:
     - name: printing variables from inventory
       ansible.builtin.debug:
-         msg: {{text}}
+         msg: '{{text}}'
