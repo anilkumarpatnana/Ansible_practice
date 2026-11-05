@@ -4,10 +4,13 @@
   vars_prompt:
     - name: name
       prompt: please enter your name
+      private: false
     - name: age
       prompt: please enter your age
+      private: false
     - name: city
       prompt: please enter your city
+      private: false
   tasks:
     - name: taking input from user and store in variable
       ansible.builtin.debug:
