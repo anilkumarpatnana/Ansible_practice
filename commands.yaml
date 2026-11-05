@@ -9,7 +9,8 @@
   tasks:
     - name: to know listening ports
       ansible.builtin.command: '{{command}}'
-      ansible.builtin.debug:
-        msg: 'above output is came from this {{command}}' 
+      register: listening_ports
 
-   
+    - name: print output for above command
+      ansible.builtin.debug:
+        msg: '{{listening_ports}}'
