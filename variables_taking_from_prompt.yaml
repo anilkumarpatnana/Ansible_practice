@@ -8,7 +8,7 @@
       prompt: please enter your age
     - city: city
       prompt: please enter your city
-  taks:
+  tasks:
     - name: taking input from user and store in variable
       ansible.builtin.debug:
         msg: 'your name is {{name}}, age is {{age}} and your city is {{city}}'
