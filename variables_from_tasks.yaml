@@ -5,5 +5,5 @@
     - name: variables from tasks
       vars:
         course: aws
-      ansible.buitin.debug:
+      ansible.builtin.debug:
          msg: 'I am learning {{ course }}'
