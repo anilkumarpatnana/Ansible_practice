@@ -11,4 +11,5 @@
     - name: removing apache packages
       ansible.builtin.package:
          name: httpd
-         state: removed     
+         state: removed 
+      tags: remove-apache   
