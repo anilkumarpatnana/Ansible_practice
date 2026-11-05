@@ -1,4 +1,7 @@
-- name= Installing Nginx
-  hosts= frontend
-  tasks=
-  - name
+- name: ping the local host
+  hosts: localhost ## Targets local host
+  connection: local ## It wont expect credentials
+  tasks:
+  - name: ping the local host
+    ping:
+    
