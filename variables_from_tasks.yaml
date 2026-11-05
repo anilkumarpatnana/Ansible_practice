@@ -1,0 +1,9 @@
+- name: Variables from tasks
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: variables from tasks
+      vars:
+        course: aws
+      ansible.buitin.debug:
+         msg: 'I am learning {{ course }}'
