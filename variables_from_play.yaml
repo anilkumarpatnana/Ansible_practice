@@ -1,0 +1,10 @@
+- name: Variables from play
+  hosts: localhost
+  connection: local
+  vars:
+    name: Anil
+    technology: cloud computing
+  tasks:
+    - name: printing variables from play
+      ansible.builtin.debug:
+          msg: '{ {  name } } is good at { {  technology } }'
