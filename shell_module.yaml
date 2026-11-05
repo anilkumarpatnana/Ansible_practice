@@ -1,0 +1,19 @@
+- name: for Running commands using shell module
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - name: command
+      prompt: enter your command
+      private: false
+    - name: description
+      prompt: command is for
+      private: false
+  become: yes
+  tasks:
+    - name: '{{description}}'
+      ansible.builtin.shell: '{{command}}'
+      register: command_output
+
+    - name: print output for above command
+      ansible.builtin.debug:
+        msg: '{{command_output}}'
