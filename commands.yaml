@@ -1,0 +1,15 @@
+- name: for Running commands
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - name: command
+      prompt: enter your command
+      private: false
+  become: yes
+  tasks:
+    - name: to know listening ports
+      ansible.builtin.command: '{{command}}'
+      ansible.builtin.debug:
+        msg: 'above output is came from this {{command}}' 
+
+   
