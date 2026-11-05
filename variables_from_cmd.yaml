@@ -1,6 +1,6 @@
 - name: Taking variables from cmd
   hosts: localhost
-  connection : local
+  connection: local
   tasks:
     - name: printing variables taken from cmd
       ansible.builtin.debug:

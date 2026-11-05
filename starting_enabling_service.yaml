@@ -1,0 +1,16 @@
+- name: Managing services
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: starting nginx service
+      ansible.builtin.service:
+         name: nginx
+         state: started
+         enabled: true
+
+    - name: starting mysql service
+      ansible.builtin.service:
+         name: mysql
+         state: started
+         enabled: yes     
