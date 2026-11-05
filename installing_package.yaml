@@ -8,7 +8,7 @@
          name: nginx
          state: installed
 
-    - name: Installing apache packages
+    - name: Installing mysql packages
       ansible.builtin.package:
-         name: httpd
+         name: mysql
          state: installed     
