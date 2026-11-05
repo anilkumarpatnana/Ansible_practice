@@ -1,5 +1,5 @@
 - name: Taking variables from user using prompt
-  hosts: local
+  hosts: localhost
   connection: local
   vars_prompt:
     - name: name
