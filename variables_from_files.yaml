@@ -1,7 +1,7 @@
 - name: variables from files
   hosts: localhost
   connection: local
-  vars_file:
+  vars_files:
     - variables.yaml
   tasks:
     - name: printing variables from separate variables file
