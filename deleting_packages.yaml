@@ -1,0 +1,14 @@
+- name: Managing packages
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: removing nginx packages
+      ansible.builtin.package:
+         name: nginx
+         state: removed
+
+    - name: removing apache packages
+      ansible.builtin.package:
+         name: httpd
+         state: removed     
