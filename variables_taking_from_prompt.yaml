@@ -1,0 +1,14 @@
+- name: Taking variables from user using prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: name
+      prompt: please enter your name
+    - age: age
+      prompt: please enter your age
+    - city: city
+      prompt: please enter your city
+  taks:
+    - name: taking input from user and store in variable
+      ansible.builtin.debug:
+        msg: 'your name is {{name}}, age is {{age}} and your city is {{city}}'
