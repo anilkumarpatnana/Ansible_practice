@@ -8,7 +8,6 @@
     - name: description
       prompt: command is for
       private: false
-  become: yes
   tasks:
     - name: '{{description}}'
       ansible.builtin.shell: '{{command}}'
