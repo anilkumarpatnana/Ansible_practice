@@ -1,0 +1,14 @@
+- name: Managing services
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: restarting nginx service
+      ansible.builtin.service:
+         name: nginx
+         state: restarted
+
+    - name: restarting mysqld service
+      ansible.builtin.service:
+         name: mysqld
+         state: restarted
