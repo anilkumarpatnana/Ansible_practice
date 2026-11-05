@@ -1,6 +1,7 @@
 - name: Managing packages
   hosts: localhost
   connection: local
+  become: yes
   tasks:
     - name: Installing nginx packages
       ansible.builtin.package:
