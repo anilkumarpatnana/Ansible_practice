@@ -1,0 +1,9 @@
+- name: variables from files
+  hosts: localhost
+  connection: local
+  vars_file:
+    - variables.yaml
+  tasks:
+    - name: printing variables from separate variables file
+      ansible.builtin.debug:
+          msg: 'His name is {{name}} and working in {{technology}} technology.'
