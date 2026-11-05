@@ -1,5 +1,5 @@
 - name: variables from inventory
-  host: localhost
+  host: local
   connection: local
   tasks:
     - name: printing variables from inventory
